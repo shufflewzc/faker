@@ -1,0 +1,12 @@
+{
+    "name": "Faker QX羊毛",
+    "description": "9.26更新,更新失败请挂VPN.脚本问题请到TG群https://t.me/scriptalking 反馈",
+    "task": [  
+	"40 9 * * * https://raw.githubusercontent.com/shufflewzc/faker/main/Aisisign.js, tag=爱思助手全能版签到,img-url=https://raw.githubusercontent.com/shufflewzc/faker/main/Image/IMG_0917.jpeg,enabled=true",
+	"30 8 * * * https://raw.githubusercontent.com/shufflewzc/faker/main/Kafx.js, tag=卡夫享积分签到, img-url=https://raw.githubusercontent.com/shufflewzc/faker/main/Image/IMG_0909.jpeg, enabled=true",
+    "40 8 * * * https://raw.githubusercontent.com/shufflewzc/faker/main/Jhsh.js, tag=建行生活, img-url=https://raw.githubusercontent.com/shufflewzc/faker/main/Image/IMG_0910.jpeg, enabled=true",
+    "10 0 * * ? https://raw.githubusercontent.com/shufflewzc/faker/main/Mrhl.js, tag=汇率通知, img-url=https://raw.githubusercontent.com/chxm1023/Task/main/icon/hljk.png, enabled=true",
+    "40 8 * * * https://raw.githubusercontent.com/shufflewzc/faker/main/Tuhyche.js, tag=途虎养车积分签到, img-url=https://raw.githubusercontent.com/shufflewzc/faker/main/Image/IMG_0905.jpeg, enabled=true",
+    "1 0 * * * https://raw.githubusercontent.com/shufflewzc/faker/main/ampDache.js, tag=高德地图打车签到, enabled=true"
+    ]
+}
