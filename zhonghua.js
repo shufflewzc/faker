@@ -34,9 +34,9 @@ https://raw.githubusercontent.com/shufflewzc/faker/main/conf/zhengjia.conf
 2.打开网站，随便逛逛，提示获取cookie成功则可以使用该脚本
 3.关闭获取cookie脚本，防止产生不必要的mitm
 多账号：
-1.抓包ziwixcx.escase.cn域名下的MembersSession
-2.打开boxjs->我的->数据查看器->在数据键输入zhengjia_data,点击VIEW->在数据内容输入抓取到的MembersSession，点击保存。
-3.若有多账号，用@分割，如MembersSession@MembersSession
+1.抓包ziwixcx.escase.cn域名下的Authorization
+2.打开boxjs->我的->数据查看器->在数据键输入zhonghua_data,点击VIEW->在数据内容输入抓取到的Authorization，点击保存。
+3.若有多账号，用@分割，如Authorization@Authorization
 
 ====================================
 ⚠️【免责声明】
@@ -51,8 +51,8 @@ https://raw.githubusercontent.com/shufflewzc/faker/main/conf/zhengjia.conf
 ******************************************/
 
 // env.js 全局
-const $ = new Env('正佳广场小程序签到')
-const ckName = 'zhengjia_data'
+const $ = new Env('中华广场小程序签到')
+const ckName = 'zhonghua_data'
 //-------------------- 一般不动变量区域 -------------------------------------
 const Notify = 1 //0为关闭通知,1为打开通知,默认为1
 const notify = $.isNode() ? require('./sendNotify') : ''
@@ -81,7 +81,7 @@ async function main() {
             console.log(`随机延迟${user.getRandomTime()}ms`)
             //用户信息查询
             await user.getUserId()
-            await user.getUsercheck()
+           // await user.getUsercheck()
         } else {
             // 将ck过期消息存入消息数组
             $.notifyMsg.push(`❌账号${user.index} >> ck已过期!`)
@@ -124,7 +124,7 @@ class UserInfo {
                 $.log(`✅签到成功！获得${data.socialpoint}积分`)
                 $.signMsg = msg
             } else {
-                $.log(`❌签到失败: ${msg}`)
+                $.log(`❌签到失败: 已签到或网络问题`)
             }
         } catch (e) {
             console.log(e)
