@@ -118,11 +118,10 @@ class UserInfo {
             }
             console.log(options)
             // 发送请求并获取响应
-            const { data, success ,msg } = (await httpRequest(options)) ?? {}
+            const { data, success} = (await httpRequest(options)) ?? {}
             // 处理响应
             if (success === true) {
                 $.log(`✅签到成功！获得${data.socialpoint}积分`)
-                $.signMsg = msg
             } else {
                 $.log(`❌签到失败: 已签到或网络问题`)
             }
